@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+	--fzHeader: 2.5rem;
+	--chiMultiplier: 1.3;
+	--subHeaderMultiplier: 0.8;
+	--vitrineMultiplier: 0.5;
+	--font-sizeLinks: 1.3rem;
+	--aspectRatioRecH: calc(1345/239);
+	--recHwidth: 70vw;
+	--recHheight: calc( var(--recHwidth) / (var(--aspectRatioRecH)));
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html , body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	font-family: 'Croissant One', cursive;
+	color: #177FAB;
+	cursor: pointer;
+}
+
+#divTitle {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 3rem 0 3rem 0;
+}
+#svgChi {
+	width: 90%;
+	z-index: 150;
+	margin: 1rem 0;
+} 
+#chisvg {
+	stroke: #177FAB;
+	stroke-width: 5px;
+	stroke-dasharray: 1100px;
+	stroke-dashoffset: 1100px;
+	animation: chi 1s ease-out forwards;   
+} 
+@keyframes chi {
+	0% {
+		stroke-dashoffset: 1100px;
+	}
+	100% {
+		stroke-dashoffset:0px;
+	}
+}
+#svgDes {
+	width: 70%;
+	z-index: 150;
+} 
+#dessvg {
+	stroke: #177FAB;
+	stroke-width: 3px;
+	stroke-dasharray: 560px;
+	stroke-dashoffset: 560px;
+	animation: des 1s ease-out forwards 1s;
+}
+@keyframes des {
+	0% {
+		stroke-dashoffset: 560px;
+	}
+	100% {
+		stroke-dashoffset:0px;
+	}
+}
+
+
+#divH, #sceneCardFlip{
+	display: none;
+}
+
+#socialMedia {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 3rem;
+}
+#chiInsta, #chiWhats {
+	display: flex;
+	align-items: center;
+	margin: 0.5rem 0;
+	letter-spacing: 0.2rem;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+#chiInsta:hover, #chiWhats:hover {
+background-color: rgb(241, 241, 241);
+}
+
+#chiInsta img, #chiWhats img {
+	width: 32px;
+	height: 32px;
+}
+#chiInsta img {
+	margin-right: 0.6rem;
+}
+
+#examplesTitle {
+	text-align: center;
+	font-family: 'Croissant One', cursive;
+	color: #177FAB;
+	font-size: 1.5rem;
+	letter-spacing: 0.2rem;
+}
+
+
+.scene {
+	position: relative;
+	width: 210px;
+	height: 140px;
+	margin: 40px auto;
+	perspective: 1000px;
+}
+.carousel {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform: translateZ(-144.5px);
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+}
+.carousel__cell {
+	position: absolute;
+	width: 190px;
+	height: 120px;
+	left: 10px;
+	top: 10px;
+	line-height: 116px;
+	font-size: 80px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+.carousel__cell:nth-child(1) { background-image: url('../../static/boloAzul.jpg'); background-size: contain; background-position: center ; background-repeat: no-repeat;}
+.carousel__cell:nth-child(2) { background-image: url('../../static/bolo4anos.jpg'); background-size: contain; background-position: center ; background-repeat: no-repeat;  }
+.carousel__cell:nth-child(3) { background-image: url('../../static/boloComAnimais.jpg'); background-size: contain; background-position: center ; background-repeat: no-repeat;  }
+.carousel__cell:nth-child(4) { background-image: url('../../static/boloComCrianca.jpg'); background-size: contain; background-position: center ; background-repeat: no-repeat;  }
+.carousel__cell:nth-child(5) { background-image: url('../../static/boloComUrsinho.jpg'); background-size: contain; background-position: center ; background-repeat: no-repeat; }
+
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(144.5px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 72deg) translateZ(144.5px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 144deg) translateZ(144.5px); }
+.carousel__cell:nth-child(4) { transform: rotateY(216deg) translateZ(144.5px); }
+.carousel__cell:nth-child(5) { transform: rotateY(288deg) translateZ(144.5px); }
+
+#carouselBtns {
+	display: flex;
+	width: 50%;
+	justify-content: space-evenly;
+	margin: 0 auto;
+}
+
+#carouselBtns button {
+	border: 2px solid #177FAB;
+	color: #177FAB;
+	font-family: 'Croissant One', cursive;
+	background-color: #fff;
+}
+
+@media  screen and (min-width: 700px) {
+	
+#examplesTitle,.scene, #carouselBtns {
+	display: none;
+}	
+
+#divTitle {
+	position: absolute;
+	top: 22vh;
+	left: 10vw;
+	width: 50%;
+	text-align: left;
+}
+#svgChi {
+	width: 100%;
+	z-index: 150;
+} 
+#svgDes {
+	width: 60%;
+}
+
+#divFox {
+	background-size: 140%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-image: url('../../static/foxImgChi.jpg');
+	position: absolute;
+	display: inline-block;
+	opacity: 0;
+	transform: scale(0);
+	top: 15vh;
+	right: 0;
+	height: 80vh;
+	width: 23vw; 
+	z-index: 110;
+	animation: loadImage 0.4s ease-in 0.7s 1 normal forwards ;
+	overflow: hidden;
+	min-width: 17rem ;
+}
+@keyframes loadImage {
+	0% {
+		opacity: 1;
+	}
+	75% {
+		transform: scale(1.08) ;
+	}
+	80%{
+		transform: rotateZ(3deg);
+	}
+	90%{
+		transform: scale(0.9) rotateZ(-3deg);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) rotateZ(0deg);
+	}
+}
+#contactForm {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transform: translatex(100%);
+	transition: all 0.3s ease-out;
+	background-color: #fff;
+}
+#contactForm.showForm {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+#socialMedia {
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
+	height: 20vh;
+	width: 50vw;
+	margin-left: 1rem;
+	padding-top: 2rem;
+}
+
+#chiInsta, #chiWhats {
+	opacity: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: calc(var(--font-sizeLinks)*0.8);
+	letter-spacing: 0.2rem;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	animation: fadeInLoad 0.4s ease-in forwards 0.5s; 
+}
+
+@keyframes fadeInLoad {
+	0% {
+		transform:translateY(-10vh);
+	}
+	70%{
+		transform: translateY(2vh);
+	}
+	90% {
+		transform: translateY(-3vh);
+	}
+	100% {
+		opacity: 1;
+		transform:translateY(-1vh);
+	}
+}
+#chiInsta:before, #chiWhats:before {
+	content: '';
+	position: absolute;
+	top: 80%;
+	left: 17%;
+	height: 2px;
+	width: 0px;
+	background-color: #177FAB;
+	animation: sublinhado 0.5s ease-in forwards 0.8s;
+}
+@keyframes sublinhado {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 82%;
+	}
+}
+#instaIcon, #whatsIcon {
+	width: 32px;
+	height: 32px;
+	margin-right: 0.4rem;
+}
+
+
+#divH {
+	background-image: url('../../static/bigRecBlue2.png');
+	background-size: cover;
+	position: absolute;
+	display: inline-block;
+	bottom: 3vh;
+	right: -100vw;
+	width: 70vw ;
+	height: var(--recHheight);
+	z-index: 100;
+	animation: loadH 0.5s ease-in forwards 0.4s;
+	min-width: 40rem;
+	min-height: 8.5rem;
+}
+@keyframes loadH {
+	80% {
+		
+		right: 8vh;
+	}
+	100% {
+	
+		right: 6vh;
+	}
+}
+#vitrineLink {
+	content: '';
+	position: absolute;
+	top: 40%;
+	left: 8%;
+	width: 16rem;
+	height: 7vh;
+	overflow: hidden;
+}
+#vitrineLink:before {
+	content: '';
+	position: absolute;
+	top: 0%;
+	left: -100%;
+	width: 15%;
+	height: 100%;
+	transition: all 0.5s ease-in ;
+	background-color: rgba( 255, 255, 255, 0.3);
+}
+#vitrineLink:hover:before {
+	content: '';
+	position: absolute;
+	top: 0%;
+	left: 100%;
+	width: 15%;
+	height: 100%;
+}
+}

@@ -1,0 +1,43 @@
+#divV {
+	display: none;
+}
+
+@media screen and (min-width: 700px)
+{
+	#divV {
+		position: absolute;
+		display: block;
+		top: 0vh;
+		left: 0;
+		height: 75vh;
+		width: auto;
+		transform-origin: bottom;
+		transition:all ease-in-out;
+		animation: load ease-in 0.5s forwards;
+	}
+	
+	@keyframes load {
+		0% {
+			
+			transform: translateY(20vh)  scale(0);
+		}
+		75% {
+			
+			transform: translateY(2vh) scale(1);
+		}
+		85% {
+			transform: translateY(8vh);
+		}
+		90%{
+			transform: translateY(5vh);
+		}
+		100% {
+			transform: translateY(6vh) scale(1);
+		}
+	}
+	
+	#divV img {
+		height: 100%;
+	}
+}
+

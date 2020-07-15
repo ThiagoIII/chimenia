@@ -1,0 +1,34 @@
+#divH {
+	position: absolute;
+	bottom: 3vh;
+	right: -100%;
+	width: 70vw;
+	animation: loadH 0.5s ease-in forwards 0.4s;
+}
+
+@keyframes loadH {
+	80% {
+		
+		right: 8vh;
+	}
+	100% {
+	
+		right: 6vh;
+	}
+}
+
+
+#divH img {
+	width: 100%;
+}
+
+#vitrine {
+	position: absolute;
+	bottom: 40%;
+	right: 76.2% ; 
+	font-family: 'Open Sans', sans-serif;
+	font-size: calc((var(--fzHeader)*var(--vitrineMultiplier)));
+	letter-spacing: 0.1rem;
+	color: white;
+	z-index: 1000;
+}
