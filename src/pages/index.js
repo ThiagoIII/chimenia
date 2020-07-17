@@ -74,7 +74,7 @@ export default () => {
 							<button className="previous-button" onClick={() => prevImg()}>Previous</button>
 							<button className="next-button" onClick={() => nextImg()}>Next</button>
 						</p>
-					
+						<Link to='/doces/0' id="irParaGal">Ir para Galeria</Link>
 								<div id="divFox"></div>
 								
 						<RecV />

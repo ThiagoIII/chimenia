@@ -48,7 +48,7 @@ a {
 	stroke-width: 5px;
 	stroke-dasharray: 1100px;
 	stroke-dashoffset: 1100px;
-	animation: chi 1s ease-out forwards;   
+	animation: chi 1s ease-out forwards;  
 } 
 @keyframes chi {
 	0% {
@@ -67,7 +67,7 @@ a {
 	stroke-width: 3px;
 	stroke-dasharray: 560px;
 	stroke-dashoffset: 560px;
-	animation: des 1s ease-out forwards 1s;
+	animation: des 1s ease-out forwards 1s; 
 }
 @keyframes des {
 	0% {
@@ -123,7 +123,7 @@ background-color: rgb(241, 241, 241);
 	position: relative;
 	width: 210px;
 	height: 140px;
-	margin: 40px auto;
+	margin: 3.5rem auto 2rem auto ;
 	perspective: 1000px;
 }
 .carousel {
@@ -172,9 +172,16 @@ background-color: rgb(241, 241, 241);
 	background-color: #fff;
 }
 
+#irParaGal {
+	display: block;
+	width: 100%;
+	margin: 1rem 0;
+	text-align: center;
+}
+
 @media  screen and (min-width: 700px) {
 	
-#examplesTitle,.scene, #carouselBtns {
+#examplesTitle,.scene, #carouselBtns, #irParaGal {
 	display: none;
 }	
 
