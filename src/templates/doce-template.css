@@ -87,9 +87,7 @@ padding: 0.5rem 0;
 }
 
 #lbDiv.lbOpen {
-	display:flex;
-	justify-content: space-between;
-	align-items: center;
+	display: none;
 }
 
 .lbIcon {
@@ -140,6 +138,12 @@ padding: 0.5rem 0;
 			opacity: 1;
 			transform: scale(1);
 		}
+	}
+
+	#lbDiv.lbOpen {
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.small-bg-gallery-navbar {

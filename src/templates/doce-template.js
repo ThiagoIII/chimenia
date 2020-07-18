@@ -148,7 +148,7 @@ const Doce =  (props) =>  {
 					<select name="pages" className="dropdownPages" onChange={ (e) => window.location.pathname = e.target.value }>
 						{Array.from({ length: numPages  }, (_ , i) => {
 								if( i === currentPage) {
-									return <option value={`/doces/${i}`} key={i}>{i}</option>
+									return <option value={`/doces/${i}`} key={i} selected>{i}</option>
 								} else {
 									return <option value={`/doces/${i}`} key={i}>{i}</option>
 								}

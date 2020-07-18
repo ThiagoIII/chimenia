@@ -46,18 +46,9 @@ a {
 #chisvg {
 	stroke: #177FAB;
 	stroke-width: 5px;
-	stroke-dasharray: 1100px;
-	stroke-dashoffset: 1100px;
-	animation: chi 1s ease-out forwards;  
+	
 } 
-@keyframes chi {
-	0% {
-		stroke-dashoffset: 1100px;
-	}
-	100% {
-		stroke-dashoffset:0px;
-	}
-}
+
 #svgDes {
 	width: 70%;
 	z-index: 150;
@@ -65,18 +56,8 @@ a {
 #dessvg {
 	stroke: #177FAB;
 	stroke-width: 3px;
-	stroke-dasharray: 560px;
-	stroke-dashoffset: 560px;
-	animation: des 1s ease-out forwards 1s; 
 }
-@keyframes des {
-	0% {
-		stroke-dashoffset: 560px;
-	}
-	100% {
-		stroke-dashoffset:0px;
-	}
-}
+
 
 
 #divH, #sceneCardFlip{
@@ -196,10 +177,35 @@ background-color: rgb(241, 241, 241);
 	width: 100%;
 	z-index: 150;
 } 
+#chisvg {
+	stroke-dasharray: 1100px;
+	stroke-dashoffset: 1100px;
+	animation: chi 1s ease-out forwards;  
+} 
+@keyframes chi {
+	0% {
+		stroke-dashoffset: 1100px;
+	}
+	100% {
+		stroke-dashoffset:0px;
+	}
+}
 #svgDes {
 	width: 60%;
 }
-
+#dessvg {
+	stroke-dasharray: 560px;
+	stroke-dashoffset: 560px;
+	animation: des 1s ease-out forwards 1s; 
+}
+@keyframes des {
+	0% {
+		stroke-dashoffset: 560px;
+	}
+	100% {
+		stroke-dashoffset:0px;
+	}
+}
 #divFox {
 	background-size: 140%;
 	background-position: 50% 50%;
