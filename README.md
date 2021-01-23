@@ -1,3 +1,13 @@
+Hello! This is a project for a friend where I was trying out a whole GatsbyJS project for the first time, so I didn't implemente all the best practices and accessibility.
+
+I have a small issue with the svg animating, some times it renders in a weird way, I got to check on that.
+
+Here I was learning how to use Gatsby, I didn't worry too much about the optmization of code and all, it was more about getting to know GatsbyJS and it was very good, I enjoyed working with it. At first those config files may take you a while but soon you get the hang of it.
+
+I will probably keep working from time to time on this as I have other projects that I'm working on it.
+
+Thanks for reading!
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
